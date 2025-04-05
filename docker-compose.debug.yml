@@ -1,0 +1,13 @@
+
+version: '3.4'
+
+services:
+  outboxpatternwithmongodb:
+    image: outboxpatternwithmongodb
+    build:
+      context: .
+      dockerfile: OutboxPatternWithMongoDB/Dockerfile
+      args:
+        - configuration=Debug
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
