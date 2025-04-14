@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "45f2iCx7SYY=",
+  "dgSpecHash": "Opfx/aj9dx8=",
   "success": true,
   "projectFilePath": "/Users/nicolas.benhamou/devoxx/OutboxPatternWithMongoDB/OutboxPatternWithMongoDB.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "/Users/nicolas.benhamou/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "/Users/nicolas.benhamou/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
     "/Users/nicolas.benhamou/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
-    "/Users/nicolas.benhamou/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
+    "/Users/nicolas.benhamou/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512",
+    "/Users/nicolas.benhamou/.nuget/packages/microsoft.netcore.app.ref/8.0.15/microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "/Users/nicolas.benhamou/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "/Users/nicolas.benhamou/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.15/microsoft.netcore.app.host.osx-arm64.8.0.15.nupkg.sha512"
   ],
   "logs": []
 }

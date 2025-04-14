@@ -1,5 +1,3 @@
-using Confluent.Kafka;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 public class OrderWithTransactionOutboxRepository : IOrderRepository
@@ -8,7 +6,7 @@ public class OrderWithTransactionOutboxRepository : IOrderRepository
     private readonly IMongoCollection<OutboxMessage> _collOutbox;
     private readonly IMongoClient _mongoClient;
 
-    public OrderWithTransactionOutboxRepository(IMongoClient mongoClient, IProducer<Null, string> producer)
+    public OrderWithTransactionOutboxRepository(IMongoClient mongoClient)
     {
         var mongoDatabase = mongoClient.GetDatabase("devoxx");
         _coll = mongoDatabase.GetCollection<Order>("orders");
@@ -24,8 +22,8 @@ public class OrderWithTransactionOutboxRepository : IOrderRepository
             await session.WithTransactionAsync(
                 async (s, ct) =>
                 {
-                    await _coll.InsertOneAsync(newOrder);
-                    await _collOutbox.InsertOneAsync(newOrder.ToOutbox());
+                    await _coll.InsertOneAsync(newOrder); // Could be any write op
+                    await _collOutbox.InsertOneAsync(newOrder.ToOutbox()); // Define a proper outbox document
                     return string.Empty;
                 }, cancellationToken: cts.Token);
         }

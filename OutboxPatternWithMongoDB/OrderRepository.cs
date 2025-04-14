@@ -1,5 +1,4 @@
 using Confluent.Kafka;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 public class OrderRepository : IOrderRepository
