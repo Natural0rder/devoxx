@@ -9,6 +9,7 @@ public class OutboxProcessor
     private readonly IMongoCollection<OutboxMessage> _coll;
     private readonly IProducer<Null, string> _producer;
     private readonly IMongoClient _mongoClient;
+    
     public OutboxProcessor(IMongoClient mongoClient, 
                            IProducer<Null, string> producer)
     {
@@ -23,9 +24,9 @@ public class OutboxProcessor
         var filter = Builders<OutboxMessage>.Filter.Exists(u => u.ProcessedOnUtc, false);
         var sort = Builders<OutboxMessage>.Sort.Ascending(u => u.OccurredOnUtc);
         var projection = Builders<OutboxMessage>.Projection
-        .Include(u => u.Content)
-        .Include(u => u.Type)
-        .Include(u => u.Id);
+            .Include(u => u.Content)
+            .Include(u => u.Type)
+            .Include(u => u.Id);
       
         var messages = await _coll.Find(filter)
                                   .Sort(sort)
