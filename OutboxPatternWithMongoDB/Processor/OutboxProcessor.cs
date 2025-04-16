@@ -9,7 +9,7 @@ public class OutboxProcessor
     private readonly IMongoCollection<OutboxMessage> _coll;
     private readonly IProducer<Null, string> _producer;
     private readonly IMongoClient _mongoClient;
-    
+
     public OutboxProcessor(IMongoClient mongoClient, 
                            IProducer<Null, string> producer)
     {
@@ -62,7 +62,7 @@ public class OutboxProcessor
                 bulkOps.Add(updateOne);
             }
 
-            if (bulkOps.Count > 0)
+            if (bulkOps.Any())
             {
                 var result = await coll.BulkWriteAsync(s, bulkOps);
                 return result.ModifiedCount;

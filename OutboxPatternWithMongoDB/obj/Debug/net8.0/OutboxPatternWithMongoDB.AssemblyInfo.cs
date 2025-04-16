@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OutboxPatternWithMongoDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c51e093582e3f3ba2655afbaf283fc02cd014dfd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba9fddcc1420bbe043d3f3f121c1fb0f46c81b75")]
 [assembly: System.Reflection.AssemblyProductAttribute("OutboxPatternWithMongoDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OutboxPatternWithMongoDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
